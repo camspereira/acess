@@ -37,13 +37,11 @@ Este notebook realiza as seguintes operações:
    - Geralmete ele já vem configurado e com o seu nome de usuário, que pode ser alternado clicando no lápis ao lado do nome.
 
 3. **Execute o Código**:
-   - Após o Cluster criado, abra o seu notebook.
+   - Após o cluster criado, abra o seu notebook.
    - Selecione no terminal o seu cluster e espere conectar.
    - Depois configurar o arquivo, execute o notebook no Databricks.
    - Os resultados serão mostrados conforme as análises realizadas no código.
 
-**OBS**:
-   - Coloquei comentários no código, para que facilite o entendimento caso haja dúvidas.
 ## Resultados Esperados
 
 - **Contagem de Acessos ao Google**: Número de vezes que o domínio "google.com" foi acessado.
@@ -54,6 +52,9 @@ Este notebook realiza as seguintes operações:
 ## Arquivos
 
 - `access_logs.txt`: Arquivo de logs de acesso no formato TXT com informações de páginas e IPs acessados.
+
+## OBS:
+   - Coloquei comentários no código, para que facilite o entendimento caso haja dúvidas.
 
 ---
 
