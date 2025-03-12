@@ -24,11 +24,22 @@ Este notebook realiza as seguintes operações:
    - Copie e cole o código deste repositório no seu notebook.
 
 2. **Prepare os Dados**:
+   - Baixe o arquivo acess_logs.txt na sua máquina.
+   - Salve com o mesmo nome para não ter problemas ou precisar de modificações do codigo.
    - Coloque o arquivo **access_logs.txt** no formato CSV dentro do DBFS.
    - Certifique-se de que o caminho do arquivo esteja correto (`/FileStore/tables/access_logs.txt` no código).
 
+3. **Criação de um cluster**:
+   - Para executar o código é preciso criar um **Cluster**
+   - No canto superior da tela do lado direito tem um botão chamado "New".
+   - Após selecionar o "New" vá até a opção "More", após isso aparece a opção "Cluster"
+   - Ou vá até o "Compute" e selecione a opção "Create compute"
+   - Geralmete ele já vem configurado e com o seu nome de usuário, que pode ser alternado clicando no lápis ao lado do nome.
+
 3. **Execute o Código**:
-   - Após configurar o arquivo, execute o notebook no Databricks.
+   - Após o Cluster criado, abra o seu notebook.
+   - Selecione no terminal o seu cluster e espere conectar.
+   - Depois configurar o arquivo, execute o notebook no Databricks.
    - Os resultados serão mostrados conforme as análises realizadas no código.
 
 ## Resultados Esperados
