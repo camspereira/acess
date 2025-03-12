@@ -78,29 +78,3 @@ df_with_ip_type = df.withColumn(
 accesses_by_ip_type = df_with_ip_type.groupBy("ip_type").count()
 
 accesses_by_ip_type.show()
-
-# COMMAND ----------
-
-# Create a view or table
-
-temp_table_name = "access_logs"
-
-df.createOrReplaceTempView(temp_table_name)
-
-# COMMAND ----------
-
-# MAGIC %sql
-# MAGIC
-# MAGIC /* Query the created temp table in a SQL cell */
-# MAGIC
-# MAGIC select * from `access_logs`
-
-# COMMAND ----------
-
-# With this registered as a temp view, it will only be available to this particular notebook. If you'd like other users to be able to query this table, you can also create a table from the DataFrame.
-# Once saved, this table will persist across cluster restarts as well as allow various users across different notebooks to query this data.
-# To do so, choose your table name and uncomment the bottom line.
-
-permanent_table_name = "access_logs"
-
-# df.write.format("parquet").saveAsTable(permanent_table_name)
