@@ -42,6 +42,8 @@ Este notebook realiza as seguintes operações:
    - Depois configurar o arquivo, execute o notebook no Databricks.
    - Os resultados serão mostrados conforme as análises realizadas no código.
 
+**OBS**:
+   - Coloquei comentários no código, para que facilite o entendimento caso haja dúvidas.
 ## Resultados Esperados
 
 - **Contagem de Acessos ao Google**: Número de vezes que o domínio "google.com" foi acessado.
