@@ -28,6 +28,8 @@ Este notebook realiza as seguintes operações:
    - Salve com o mesmo nome para não ter problemas ou precisar de modificações do codigo.
    - Coloque o arquivo **access_logs.txt** no formato CSV dentro do DBFS.
    - Certifique-se de que o caminho do arquivo esteja correto (`/FileStore/tables/access_logs.txt` no código).
+   - Lembrando que esse caminho `/FileStore/tables/access_logs.txt` no código é o que está na minha máquina, para rodar na sua é ideal verificar =).
+
 
 3. **Criação de um cluster**:
    - Para executar o código é preciso criar um **Cluster**
@@ -53,8 +55,6 @@ Este notebook realiza as seguintes operações:
 
 - `access_logs.txt`: Arquivo de logs de acesso no formato TXT com informações de páginas e IPs acessados.
 
-## OBS:
-   - Coloquei comentários no código, para que facilite o entendimento caso haja dúvidas.
 
 ---
 
