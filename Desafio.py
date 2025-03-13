@@ -9,57 +9,45 @@
 
 # COMMAND ----------
 
-# Carregando o arquivo CSV como um DataFrame
-file_location = "/FileStore/tables/access_logs.txt"  # Localização do arquivo no DBFS
+file_location = "/FileStore/tables/access_logs.txt"  
 file_type = "csv"  # Tipo de arquivo
 
-# Configurações do arquivo CSV
-infer_schema = "false"  # Não inferir o tipo de dados automaticamente
-first_row_is_header = "false"  # O arquivo não tem cabeçalho
-delimiter = " "  # O delimitador entre os campos é espaço
+infer_schema = "false"  
+first_row_is_header = "false"  
+delimiter = " " 
 
-# Lendo o arquivo e criando o DataFrame
 df = spark.read.format(file_type) \
     .option("inferSchema", infer_schema) \
     .option("header", first_row_is_header) \
     .option("sep", delimiter) \
     .load(file_location)
 
-# Exibindo as primeiras linhas do DataFrame para verificação
 df.show()
 
 # COMMAND ----------
 
-# Contando a quantidade de acessos ao site google.com
 google_access_count = df.filter(df["_c3"] == "google.com").count()
 
-# Exibindo a quantidade de acessos
 print(f"Quantidade de acessos a google.com: {google_access_count}")
 
 # COMMAND ----------
 
-# Contando acessos por página (_c3 representa o domínio da página)
 page_counts = df.groupBy("_c3").count()
 
-# Ordenando as páginas por número de acessos e pegando as 5 mais acessadas
 top_5_pages = page_counts.orderBy("count", ascending=False).limit(5)
 
-# Exibindo as 5 páginas mais acessadas
 top_5_pages.show()
 
 # COMMAND ----------
 
-# Contando acessos por data (_c1 representa a data dos acessos)
 accesses_by_date = df.groupBy("_c1").count()
 
-# Ordenando os acessos por data e exibindo as 100 primeiras linhas
 accesses_by_date.orderBy("_c1").show(100, False)
 
 # COMMAND ----------
 
 from pyspark.sql.functions import when, col
 
-# Criando uma nova coluna 'ip_type' para classificar os IPs em 'interno' ou 'externo'
 df_with_ip_type = df.withColumn(
     "ip_type", 
     when(col("_c0").like("10.%"), "internal")  # IPs internos começam com 10.
@@ -83,8 +71,6 @@ df_with_ip_type = df.withColumn(
     .otherwise("external")  # Qualquer outro IP é classificado como 'externo'
 )
 
-# Contando a quantidade de acessos por tipo de IP (interno ou externo)
 accesses_by_ip_type = df_with_ip_type.groupBy("ip_type").count()
 
-# Exibindo a contagem de acessos por tipo de IP
 accesses_by_ip_type.show()
