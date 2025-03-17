@@ -22,10 +22,10 @@ Este notebook realiza as seguintes operações:
 
 1. **Carregue o notebook no Databricks**:
    - Crie uma conta ou login no Databricks e crie um novo notebook.
-   - [DataBriks Community](community.cloud.databricks.com)
+   - [Databricks Community](community.cloud.databricks.com)
    - Copie e cole o código deste repositório no seu notebook.
-   - [url do projeto](community.cloud.databricks.com)
-
+   - [Acesse o projeto](https://github.com/camspereira/acess.git)
+   
 2. **Prepare os Dados**:
    - Baixe o arquivo acess_logs.txt na sua máquina.
    - Salve com o mesmo nome para não ter problemas ou precisar de modificações do codigo.
