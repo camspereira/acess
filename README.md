@@ -1,4 +1,4 @@
-#  Databricks Notebook: Desafio - Análise de Tabela
+# Desafio - Análise de Tabela
 Este notebook demonstra como carregar um arquivo de logs de acesso (no formato TXT) no Databricks File System (DBFS), transformá-lo em uma tabela e realizar consultas sobre os dados. O arquivo **access_logs.txt** contém informações de acesso, e com esse notebook, você realiza algumas análises sobre o conteúdo deste arquivo.
 
 ## Descrição
