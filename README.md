@@ -6,7 +6,7 @@ Este notebook demonstra como carregar um arquivo de logs de acesso (no formato T
 Este notebook realiza as seguintes operações:
 
 1. **Leitura de Dados**: Carrega o arquivo **access_logs.txt** armazenado no DBFS e o transforma em um DataFrame.
-2. **Contagem de Acessos**: Filtra os dados para contar o número de visitas ao site "google.com".
+2. **Contagem de Acessos ao Google**: Conta o número de acessos ao domínio "google.com".
 3. **Contagem de Páginas Mais Visitadas**: Agrupa os dados por página e retorna as 5 páginas mais acessadas.
 4. **Contagem de Acessos por Data**: Agrupa os dados por data e exibe a quantidade de acessos para cada data.
 5. **Classificação de IP**: Classifica os endereços IP como "internos" ou "externos" e conta o número de acessos de cada tipo de IP.
@@ -15,13 +15,16 @@ Este notebook realiza as seguintes operações:
 
 - **Databricks**: Ambiente utilizado para o processamento de dados.
 - **PySpark**: Usado para processamento distribuído dos dados no notebook.
+- **Pandas**: Utilizado para operações em DataFrame em memória para análises mais rápidas e simples.
 - **Python**: Linguagem usada para implementar o código.
 
 ## Como Usar
 
 1. **Carregue o notebook no Databricks**:
-   - Faça login no Databricks e crie um novo notebook.
+   - Crie uma conta ou login no Databricks e crie um novo notebook.
+   - [DataBriks Community](community.cloud.databricks.com)
    - Copie e cole o código deste repositório no seu notebook.
+   - [url do projeto](community.cloud.databricks.com)
 
 2. **Prepare os Dados**:
    - Baixe o arquivo acess_logs.txt na sua máquina.
