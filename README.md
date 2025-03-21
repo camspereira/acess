@@ -15,7 +15,6 @@ Este notebook realiza as seguintes operações:
 
 - **Databricks**: Ambiente utilizado para o processamento de dados.
 - **PySpark**: Usado para processamento distribuído dos dados no notebook.
-- **Pandas**: Utilizado para operações em DataFrame em memória para análises mais rápidas e simples.
 - **Python**: Linguagem usada para implementar o código.
 
 ## Como Usar
